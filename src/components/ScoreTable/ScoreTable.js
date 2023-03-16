@@ -15,7 +15,6 @@ const ScoreTable = () => {
             .then((response) => {
                 setScoreData(response.data)
             })
-            .catch((error) => console.log(error))
     }
 
     useEffect(() => {
