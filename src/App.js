@@ -92,7 +92,7 @@ const cycleTemplate = () => {
   return (
     <div className="App">
       <section className="header">
-          <h1>HACKER TYPE</h1>
+          <h1 className="header__title">HACKER TYPE</h1>
       </section>
       <TemplateField 
       templates={templates}

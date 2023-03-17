@@ -111,6 +111,7 @@ const InputField = ({fetchData, numWords, templates, setShow}) => {
                         language="javascript"
                         onChange={setEditor}
                         value={editor}
+                        hasStarted={hasStarted}
                     />
                     <button className={borderClass}>START/STOP</button>
                     

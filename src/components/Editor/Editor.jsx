@@ -8,10 +8,15 @@ import 'codemirror/mode/css/css';
 import {Controlled as ControlledEditor} from 'react-codemirror2';
 
 
-const Editor = ({language, value, onChange}) => {
+const Editor = ({language, value, onChange, hasStarted}) => {
 
     function handleChange(editor, data, value) {
-        onChange(value)
+        if(!!hasStarted) {
+            onChange(value)
+            onChange("")
+        } 
+        else {
+        }
         console.log(editor)
     }
 
