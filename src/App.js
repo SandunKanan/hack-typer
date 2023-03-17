@@ -88,6 +88,7 @@ function App() {
       <InputField
         fetchData={fetchScoreData}
         numWords={getNumWords(templates[1].lines)}
+        templates={templates[1]}
       />
       <div className="toggle">
         <button className="toggle__btn" onClick={handleShow}>SHOW RESULTS</button>

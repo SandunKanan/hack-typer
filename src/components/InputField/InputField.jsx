@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import Editor from "../Editor/Editor";
 
-const InputField = ({fetchData, numWords}) => {
+const InputField = ({fetchData, numWords, templates}) => {
 
     // const [input, setInput] = useState();
     const [hasStarted, setHasStarted] = useState(false)
@@ -11,6 +11,8 @@ const InputField = ({fetchData, numWords}) => {
     const [timeTaken, setTimeTaken] = useState(null)
 
     // console.log(input)
+
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -44,6 +46,23 @@ const InputField = ({fetchData, numWords}) => {
       // Editor
     const [editor, setEditor] = useState('');
     console.log("HTML", editor[0])
+
+
+
+    let totalChar = templates.lines.join("")
+    let templateChar = totalChar.replaceAll(' ','')
+    console.log("TemplateCount", templateChar.length)
+    let editorChar = ((editor.replaceAll(' ','')).length) - (templates.lines.length - 1)
+    console.log("editorChar", editorChar)
+
+    if (templateChar = editorChar) {
+        console.log("MATCH")
+        // return true
+    } else {
+        console.log("DONT MATCH")
+        // return false
+    }
+
 
     return (
             <section className="input">
