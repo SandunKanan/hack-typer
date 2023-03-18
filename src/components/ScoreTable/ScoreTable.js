@@ -13,7 +13,7 @@ const ScoreTable = ({scoreData}) => {
                         <h3>NAME</h3>
                         <h3>SCORE</h3>
                     </div>
-                    {scoreData.sort((a,b) => b.score -a.score).map(scoreItem => {
+                    {scoreData.sort((a,b) => b.score - a.score).map(scoreItem => {
                             return (
                                 <ScoreTableItem
                                 key = {scoreItem.id}
